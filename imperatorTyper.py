@@ -9,6 +9,8 @@ from telethon import TelegramClient, events, errors
 # ============ НАСТРОЙКИ ============
 api_id = int(os.environ.get("TG_API_ID", 123456))
 api_hash = os.environ.get("TG_API_HASH", "your_api_hash")
+print("API_ID загружен:", api_id != 123456)
+print("API_HASH загружен:", api_hash != "your_api_hash")
 DELAY_MIN, DELAY_MAX = 2, 3
 REPLY_DELAY_MIN, REPLY_DELAY_MAX = 2, 3
 ZAGLO_IN_NAME = False
