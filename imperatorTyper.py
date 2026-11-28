@@ -219,8 +219,8 @@ async def cmd_status(event):
 
 async def main():
     print("Подключение к Telegram...")
-    await client.connect()
-    
+    await client.connect() # <--- ТЕПЕРЬ ТОЛЬКО CONNECT, БЕЗ START()
+
     if not await client.is_user_authorized():
         print("Сессия не найдена. Запрашиваю QR-код...")
         qr = await client.qr_login()
